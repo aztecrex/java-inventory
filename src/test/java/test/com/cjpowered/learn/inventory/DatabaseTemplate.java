@@ -17,4 +17,16 @@ public class DatabaseTemplate implements InventoryDatabase {
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
+    @Override
+    public void setRequiredOnHand(final Item item, final int newAmount) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("NYI");
+    }
+
+    @Override
+    public int onOrder(final Item item) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("NYI");
+    }
+
 }
