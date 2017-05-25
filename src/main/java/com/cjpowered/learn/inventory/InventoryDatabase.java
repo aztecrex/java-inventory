@@ -1,5 +1,6 @@
 package com.cjpowered.learn.inventory;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -100,5 +101,26 @@ public interface InventoryDatabase {
      * @return fetched value
      */
     int onHand(Item item, Warehouse warehouse);
+
+    /**
+     * Fetch the number of on-hand units expiring on or before a date.
+     *
+     * @param item
+     *            item to query. The item instance must have been returned by
+     *            the same implementation on which this method is called.
+     *
+     *
+     * @param warehouse
+     *            warehouse to query. The warehouse instance must have been
+     *            returned by the same implementation on which this method is
+     *            called.
+     *
+     * @param when
+     *            target expiration date. Units that expire on or before this
+     *            date will be included in the returned count.
+     *
+     * @return fetched value
+     */
+    int expireOnOrBefore(Item item, Warehouse warehouse, LocalDate when);
 
 }

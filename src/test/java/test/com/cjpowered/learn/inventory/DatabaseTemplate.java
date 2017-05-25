@@ -1,5 +1,6 @@
 package test.com.cjpowered.learn.inventory;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import com.cjpowered.learn.inventory.InventoryDatabase;
@@ -40,6 +41,11 @@ public class DatabaseTemplate implements InventoryDatabase {
 
     @Override
     public void setRequiredOnHand(Item item, Warehouse warehouse, int newAmount) {
+        throw new UnsupportedOperationException("Not yet implemented");        
+    }
+    
+    @Override
+    public int expireOnOrBefore(final Item item, final Warehouse warehouse, final LocalDate when) {
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
